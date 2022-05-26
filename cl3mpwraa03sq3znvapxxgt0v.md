@@ -14,31 +14,37 @@
 *   Diyelim ki bu andan itibaren Amazon S3 ile çalışmak istiyorsunuz. Birkaç bucket yapın ve birkaç bucket listeleyin. AWS Komut Satırı arayüzünü kullanabilirsiniz bilgisayarınızda kullanmak isterseniz awscli ı yüklemeniz gerekmektedir.
 *   AWS CLI’yi yapılandırın bunun için bilgisayarınızda awscli yüklü olması gerekir
 
+```
 aws configure
-
+```
 *   Daha önce oluşturup kaydettiğiniz kullanıcının acces key id’sini ve secret access key anahtarlarını girin.
 *   Bölgenizin adını girin
 *   AWS CLI’den rastgele bir adla bir S3 paketi oluşturun. Uygun izinleriniz varsa, hem s3 bucket oluşturabilir hem de listeleyebilirsiniz.
 
+```
 aws s3 mb s3://mybucketnameherazur
-
+```
 S3 paketlerinizi listeleyin.
 
+```
 aws s3 ls
-
+```
 *   EC2'den S3'e bağlanmak için Erişim anahtarlarını kullandınız.
 *   Kimlik bilgisi dosyasını görüntüleyin. Sabit kodlanmış kimlik bilgileri, güvenlik açısından güvensizdir.
 
+```
 cat ~/.aws/credentials
-
+```
 *   Dosyayı silin. Bu, kimlik bilgilerini kaldıracak
 
+```
 rm ~/.aws/credentials
-
+```
 *   Şimdi kovaları listelemeye çalışın. Erişim anahtarlarını temizlediğimiz için yapamazsınız.
 
+```
 aws s3 ls us-east-1
-
+```
 ### BÖLÜM 2: IAM Rolleri ile İzinler
 
 *   IAM Dashboard’a gidin ve Roles’e tıklayın
@@ -58,4 +64,6 @@ Roller, her 30 dakikada bir dönen geçici kimlik bilgilerini kullanır ve sabit
 
 *   EC2'ye eklenen rol için geçici kimlik bilgilerini görüntülemek için bu komutu EC2'nizin içine yazın.
 
+```
 curl 169.254.169.254/latest/meta-data/iam/security-credentials/{rol-adınız}
+```
