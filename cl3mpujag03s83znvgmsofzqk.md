@@ -15,11 +15,13 @@ AWS Amplify, sunucusuz arka uçlara sahip tek sayfalı web uygulamaları veya st
 
 *   Bir React uygulaması oluşturmanın en kolay yolu, create-react-app komutunu kullanmaktır. Komut İsteminizde veya Terminalinizde aşağıdaki komutu kullanarak bu paketi yükleyin:
 
+```
 npx create-react-app amplifyapp
 
 cd amplifyapp
 
 npm start
+```
 
 #### GitHub deposunu başlat
 
@@ -81,6 +83,7 @@ Bu adımda, metin düzenleyicinizi kullanarak kodda bazı değişiklikler yapaca
 
 a. Aşağıdaki kod ile src/App.js dosyasını düzenleyin ve kaydedin.
 
+```
 import React from 'react';  
 import logo from './logo.svg';  
 import './App.css';  
@@ -97,6 +100,7 @@ function App() {
 }  
   
 export default App;
+```
 
 B. Yeni bir yapıyı otomatik olarak başlatmak için Komut İstemi’nde (Windows) veya Terminal’de (macOS) GitHub’daki değişiklikleri itin:
 
