@@ -21,7 +21,9 @@ Amplify CLI — Amplify CLI, AWS hizmetlerini doğrudan terminalinizden olu�
 
 Amplify Command Line Interface (CLI), basit bir kılavuzlu iş akışını izleyerek uygulamanız için AWS bulut hizmetleri oluşturmaya yönelik birleşik bir araç zinciridir. Şimdi Komut İstemi’ni (Windows) veya Terminal’i (macOS) kullanarak Amplify CLI’yi yükleyelim. NOT: Bu komut, Komut İstemi/Terminalinizdeki herhangi bir dizinde çalıştırılabilir, çünkü “-g” ikili dosyanın sisteminize global olarak kurulacağını gösterir.
 
+```
 npm install -g @aws-amplify/cli
+```
 
 #### Amplify CLI’yi yapılandırın
 
@@ -29,8 +31,9 @@ Amazon IAM (Kimlik ve Erişim Yönetimi), AWS’de kullanıcıları ve kullanıc
 
 CLI’yi yapılandırmak için yapılandırma komutunu çalıştırın. CLI yapılandırma sürecinin bir videosunu izlemek için burayı [tıklayın](https://www.youtube.com/watch?v=fWbM5DLh25U) .
 
+```
 amplify configure
-
+```
 #### Amplify uygulamasını başlatın
 
 Ardından, bir Backend dağıtacağız ve Backend ortamını yerel olarak başlatacağız.
