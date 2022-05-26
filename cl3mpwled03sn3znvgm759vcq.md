@@ -3,16 +3,19 @@
 *   Lab 1'de yaptığımız gibi bir Amazon Linux EC2 Bulut Sunucusuna SSH ile bağlanın.
 *   Apache web sunucusunu kurun
 
+```
 sudo yum -y install httpd
-
+```
 *   HTTPD hizmetini başlatın.
 
+```
 sudo service httpd start
-
+```
 *   Başlangıçta HTTPD sunucusunu etkinleştir
 
+```
 sudo chkconfig httpd on
-
+```
 *   EC2 Dashboard’a gidin ve instance ı seçin.
 *   İnstance açıklaması altında ve Güvenlik Grubunun adına tıklayın.
 *   İnbound Rules ekleyin ve Port range 80 ve Source IP’si 0.0.0.0/0 olan bir gelen kuralı ekleyin
@@ -20,16 +23,19 @@ sudo chkconfig httpd on
 *   Apache Web Sunucusu Test Page Web Sayfasını görmelisiniz
 *   Kök kullanıcı olun
 
+```
 sudo su
-
+```
 *   Basit bir özel index.html sayfası oluşturun ve /var/www/html üzerine koyun. Bu dizin, Apache web sunucusunun index.html dosyasını arayacağı varsayılan dizindir.
 
+```
 echo "Merhaba. Bu sayfa benim AWS EC2 Linux Bulut Sunucumda barındırılıyor.">/var/www/html/index.html
-
+```
 *   index.html dosyasına genel erişim vermek için html klasörünün iznini değiştirin
 
+```
 chmod -R 755 /var/www/html
-
+```
 *   Şimdi bir web sunucusundaki instance IP’sine tekrar göz atın. Bu mesajınızı görmelisiniz. ‘Merhaba. Bu sayfa benim AWS EC2 Linux Bulut Sunucumda barındırılıyor’
 
 *   İnstance’ı seçin ve ardından Actions, Image and Templates, Create Image. öğesini seçin .
